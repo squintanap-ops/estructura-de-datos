@@ -1,0 +1,54 @@
+/* Variables de tema */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --nav-bg: #f4f4f4;
+}
+
+/* Tema oscuro */
+.dark-mode {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --nav-bg: #333333;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--nav-bg);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+#themeToggle {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
