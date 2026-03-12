@@ -1,0 +1,90 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f5f7fb;
+}
+
+/* HEADER */
+
+.header{
+background:#074dbe;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+.menu a:hover{
+color:#38bdf8;
+}
+
+/* TITULO */
+
+.titulo{
+text-align:center;
+margin:40px 0;
+color:#1e293b;
+}
+
+/* CATALOGO */
+
+#catalogo{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+}
+
+/* TARJETAS */
+
+.card{
+background:white;
+border-radius:10px;
+padding:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+margin-bottom:10px;
+color:#555;
+}
+
+.precio{
+font-weight:bold;
+color:#2563eb;
+font-size:18px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#1e293b;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
