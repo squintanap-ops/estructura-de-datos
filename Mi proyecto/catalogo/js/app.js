@@ -1,12 +1,12 @@
 // Cargar Header
-fetch("../componentes/header.html")
+fetch("../componentes/header/header.html")
     .then(res => res.text())
     .then(data => {
         document.getElementById("header").innerHTML = data;
     });
 
 // Cargar Footer
-fetch("../componentes/footer.html")
+fetch("../componentes/footer/footer.html")
     .then(res => res.text())
     .then(data => {
         document.getElementById("footer").innerHTML = data;
