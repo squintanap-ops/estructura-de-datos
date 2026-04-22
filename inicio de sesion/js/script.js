@@ -1,19 +1,32 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.getElementById('loginForm');
-    
-    loginForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevenir el envío del formulario
+// BOTONES DE LA CARD PARA ABRIR LA MODAL
+let botones = document.querySelectorAll(".btn-modal");
 
-        const email = document.getElementById('email');
-        const password = document.getElementById('password');
+botones.forEach(boton => {
+    boton.addEventListener("click", function(){
+        let modal = new bootstrap.Modal(document.getElementById("miModal"));
+        modal.show();
+    })
 
-        // Validación básica del formulario
-        if (!email.value || !password.value) {
-            alert('Por favor, ingrese su correo y contraseña.');
-        } else {
-            alert('¡Inicio de sesión exitoso!');
-            email.value = '';
-            password.value = '';
-        }
-    });
 });
+
+// Validacion del formulario
+document.getElementById("login").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let correo = document.getElementById("email").value
+    let password = document.getElementById("password").value
+    let mensaje = document.getElementById("mensaje");
+    const USER_DEFAULT = "prueba@gmail.com";
+    const PASSWORD_DEFAULT = "123456";
+
+    if (correo === "" || password === ""){
+        mensaje.innerHTML = "Todos los campos son obligatorios!";
+        mensaje.className = "text-warning";
+    } else if(correo === USER_DEFAULT && password === PASSWORD_DEFAULT){
+        mensaje.innerHTML = "Bienvenido al sistema";
+        mensaje.className = "text-success";
+    } else {
+        mensaje.innerHTML = "Error al procesar los datos!";
+        mensaje.className = "text-danger";
+    }
+})
